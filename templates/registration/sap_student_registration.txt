@@ -1,0 +1,33 @@
+*&---------------------------------------------------------------------*
+*& Report ZLOCAL_CLASS_CAR
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT zlocal_class_student.
+CLASS student DEFINITION.
+
+  PUBLIC SECTION.
+    DATA: reg_id TYPE i VALUE 11507321.
+          
+    CLASS-DATA: college(20) TYPE c VALUE 'Lovely Professional University'.
+
+    METHODS: get_reg_id.
+
+
+ENDCLASS.
+
+CLASS student IMPLEMENTATION.
+  
+  
+  METHOD get_reg_id.
+    WRITE:/ 'The registration ID is	', reg_id.
+  ENDMETHOD.
+
+ENDCLASS.
+
+START-OF-SELECTION.
+  DATA objectx TYPE REF TO student.
+  CREATE OBJECT objectx.
+  
+  CALL METHOD objectx->get_reg_id.
+  WRITE:/ 'College is ', student=>college.

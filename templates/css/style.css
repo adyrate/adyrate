@@ -1,0 +1,129 @@
+body {
+	overflow-x: hidden;
+}
+
+.btn-rounded {
+	border-radius: 25px;
+}
+
+.space {
+	padding-bottom: 25px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Coupon*/
+.coupon {
+    border: 5px dotted #092535;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .coupon-section {
+        padding-top: 25px;
+    }
+}
+
+
+.progress-bar {
+	background-color: #2BBBAD !important;
+}
+
+
+.rating-card div {
+	float: left;
+    clear: none; 
+}
+
+
+
+.user-image {
+	border-radius: 50% !important;
+	width: 100px;
+	height: 100px;
+}
+
+.store-image {
+    border-radius: 50% !important;
+    width: 65px;
+    height: 65px;
+}
+
+
+.input-group.md-form.form-sm.form-2 input {
+    border: 5px solid #2196f3;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+.input-group.md-form.form-sm.form-2 input.red-border  {
+    border: 1px solid #2196f3;
+}
+
+input {
+    color: #2196f3 !important;
+}
+
+
+
+.home-bg {
+    min-height: 300px;  
+}
+::placeholder {
+    color: #2196f3 !important;
+}
+
+
+#map {
+        width: 100%;
+}
+.col-xs-4
+{
+	position:relative;
+	width:33.333%;
+}
+.col-xs-1
+{
+	position:relative;
+	width:10%;
+}
+.col-xs-5
+{
+	position:relative;
+	width:50%;
+}
+.coupon_text
+{
+	font-family:verdana;
+	font-weight:400;
+	margin-right:200px;
+	text-align:left;
+}
+.coupon-card
+{
+	height:70px;
+	
+	border-bottom:dashed 02px #d8dae1;
+	margin-top:05px;
+	margin-bottom:05px;
+	padding-top:10px;
+	padding-bottom:05px;
+}
+       
+
+ height: 380px;
+        background-color: grey;
+      }
+
+
+
+
+
+
+
+
+

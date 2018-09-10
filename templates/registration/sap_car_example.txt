@@ -1,0 +1,43 @@
+*&---------------------------------------------------------------------*
+*& Report ZLOCAL_CLASS_CAR
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+
+REPORT zlocal_class_car.
+CLASS car DEFINITION.
+
+  PUBLIC SECTION.
+    DATA: color TYPE string VALUE 'RED',
+          price TYPE i VALUE 2000000.
+    CLASS-DATA: company(20) TYPE c VALUE 'Hyundai'.
+
+    METHODS: setcolor IMPORTING lv_color TYPE string,
+      getcolor,
+      constructor.
+
+  PRIVATE SECTION.
+    DATA: make  TYPE string,
+          model TYPE string.
+
+ENDCLASS.
+
+CLASS car IMPLEMENTATION.
+  METHOD constructor.
+    WRITE:/ 'Constructor Triggered'.
+  ENDMETHOD.
+  METHOD setcolor.
+    color = lv_color.
+  ENDMETHOD.
+  METHOD getcolor.
+    WRITE:/ 'The color of the CAR is ', color.
+  ENDMETHOD.
+
+ENDCLASS.
+
+START-OF-SELECTION.
+  DATA objectx TYPE REF TO car.
+  CREATE OBJECT objectx.
+  CALL METHOD objectx->setcolor('Blue').
+  CALL METHOD objectx->getcolor.
+  WRITE:/ 'Company is ', car=>company.
